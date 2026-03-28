@@ -34,7 +34,8 @@ nav {
 .hero {
   min-height: 100vh;
   display: flex; align-items: center;
-  padding-top: 56px; position: relative;
+  padding-top: 80px; position: relative;
+  
 }
 .hero-content { padding: 60px 0 30px; max-width: 680px; }
 
