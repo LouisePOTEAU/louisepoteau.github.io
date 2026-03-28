@@ -151,25 +151,25 @@ nav {
 
   .nav-inner {
     padding: 0 16px;
-    justify-content: space-between;
-    overflow: visible;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 8px;
   }
 
-  .nav-logo { 
-    font-size: 13px;
-    flex-shrink: 0;  /* empêche le logo de se compresser */
-  }
+  .nav-logo { font-size: 13px; }
 
   .nav-links {
     display: flex;
-    gap: 8px;
-    flex-shrink: 1;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   .nav-links a {
-    font-size: 8px;
-    letter-spacing: 0.03em;
-    white-space: nowrap;  /* empêche les mots de se couper */
+    font-size: 9px;
+    letter-spacing: 0.05em;
   }
 }
 
