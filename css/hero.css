@@ -141,9 +141,23 @@ nav {
 @media (max-width: 900px) {
   .hero-visual { display: none; }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-links { display: none; }
   .hero-content { padding: 60px 0; }
+} */
+
+@media (max-width: 768px) {
+  .hero-content { padding: 60px 0; }
+
+  .nav-links {
+    display: flex;
+    gap: 16px;          /* réduit l'espace entre les liens */
+  }
+
+  .nav-links a {
+    font-size: 10px;    /* légèrement plus petit */
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero-stats {
