@@ -136,7 +136,15 @@
 
 .row-num  { font-size: 11px; color: var(--muted); font-family: var(--mono); }
 .row-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.row-name { font-family: 'Jost','Futura',sans-serif; font-size: 15px; font-weight: 300; color: var(--text-bright); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-name { 
+  font-family: 'Jost','Futura',sans-serif; 
+  font-size: 15px; 
+  font-weight: 300; 
+  color: var(--text-bright); 
+  white-space: normal;        /* était: nowrap */
+  overflow: visible;          /* était: hidden */
+  text-overflow: unset;       /* était: ellipsis */
+}
 .row-org  { font-size: 11px; color: var(--text-dim); letter-spacing: 0.03em; }
 .row-tags { display: flex; gap: 6px; }
 .row-year { font-size: 11px; color: var(--text-dim); white-space: nowrap; font-family: var(--mono); }
@@ -193,7 +201,10 @@
 @media (max-width: 768px) {
   .featured-grid { grid-template-columns: 1fr; }
   .project-card.wide { grid-column: span 1; }
-  .project-row { grid-template-columns: 30px 1fr auto; }
+  .project-row { 
+    grid-template-columns: 1fr auto;  /* était: 30px 1fr auto */
+    padding: 14px 16px;
+  }
   .row-tags, .row-year { display: none; }
 }
 
