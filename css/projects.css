@@ -103,6 +103,17 @@
 /* ── Project list rows ── */
 .project-list { margin-top: 2px; }
 
+@media (max-width: 768px) {
+  .featured-grid { grid-template-columns: 1fr; }
+  .project-card.wide { grid-column: span 1; }
+  .project-list { grid-template-columns: 1fr; }   /* ← ajoute ça */
+  .project-row {
+    grid-template-columns: 1fr auto;
+    padding: 14px 16px;
+  }
+  .row-tags, .row-year { display: none; }
+}
+
 .project-row {
   background: var(--surface); border: 1px solid var(--border); border-top: none;
   padding: 16px 28px;
