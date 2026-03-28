@@ -101,17 +101,11 @@
 .legend-dot--da { background: var(--da-accent); }
 
 /* ── Project list rows ── */
-.project-list { margin-top: 2px; }
-
-@media (max-width: 768px) {
-  .featured-grid { grid-template-columns: 1fr; }
-  .project-card.wide { grid-column: span 1; }
-  .project-list { grid-template-columns: 1fr; }   /* ← ajoute ça */
-  .project-row {
-    grid-template-columns: 1fr auto;
-    padding: 14px 16px;
-  }
-  .row-tags, .row-year { display: none; }
+.project-list {
+  margin-top: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
 }
 
 .project-row {
@@ -212,8 +206,10 @@
 @media (max-width: 768px) {
   .featured-grid { grid-template-columns: 1fr; }
   .project-card.wide { grid-column: span 1; }
-  .project-row { 
-    grid-template-columns: 1fr auto;  /* était: 30px 1fr auto */
+  .project-list { grid-template-columns: 1fr !important; }
+  .more-col { display: flex; flex-direction: column; gap: 2px; }
+  .project-row {
+    grid-template-columns: 1fr auto;
     padding: 14px 16px;
   }
   .row-tags, .row-year { display: none; }
