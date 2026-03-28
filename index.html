@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Louise Poteau — Data Science & AI Engineer</title>
+  <meta name="description" content="Portfolio of Louise Poteau, Data Science and AI Engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/cv.css" />
+  <link rel="stylesheet" href="css/video.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Louise <span>Poteau</span></a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#video-resume">Video Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="availability-badge">Available immediately </div>
+        <div class="hero-label">Data Science &amp; Artificial Intelligence Engineer</div>
+        <h1 class="hero-name">Louise<br><em>Poteau</em></h1>
+        <p class="hero-title">Dual Expertise: Engineering &amp; Management</p>
+        <p class="hero-subtitle"><b>Transforming raw data into meaningful insights</b></p>
+        <p class="hero-bio">
+          I design and deploy <strong>predictive models</strong> and
+          <strong>analytical solutions</strong> that <strong>turn data into actionable decisions.</strong><br>
+          Curious and creative, <strong>I adapt quickly</strong> to new environments
+          and tackle technical challenges with <strong>method</strong> and <strong>creativity</strong>.
+        </p>
+        <div class="hero-stats">
+          <!-- <div class="stat-item">
+            <span class="stat-num">12+</span>
+            <span class="stat-label">Projects</span>
+          </div> -->
+          <!-- <div class="stat-item">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Years exp.</span>
+          </div> -->
+          <!-- <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div> -->
+
+          <span class="stat-num">Imagine</span>
+          <!-- <span class="stat-label">Open-minded</span> -->
+
+          <span class="stat-num">Explore</span>
+          <!-- <span class="stat-label">Curiosity</span> -->
+
+          <span class="stat-num">Build</span>
+          <!-- <span class="stat-label">Problems solved</span> -->
+
+          </div><!-- /hero-stats -->
+
+          
+
+        <div class="hero-scroll-hint">
+          Ready to discover more?
+          <span class="scroll-arrow">↓</span>
+        </div>
+
+      </div><!-- /hero-content -->
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="170" cy="170" r="130" stroke="#251d35" stroke-width="1"/>
+        <circle cx="170" cy="170" r="90"  stroke="#251d35" stroke-width="1"/>
+        <circle cx="170" cy="170" r="50"  stroke="#251d35" stroke-width="1"/>
+        <circle cx="170" cy="40"  r="3"  fill="#9b3dc0" opacity="0.8"/>
+        <circle cx="265" cy="105" r="2"  fill="#9b3dc0" opacity="0.5"/>
+        <circle cx="290" cy="200" r="4"  fill="#c47de8" opacity="0.7"/>
+        <circle cx="230" cy="290" r="2"  fill="#9b3dc0" opacity="0.4"/>
+        <circle cx="110" cy="300" r="3"  fill="#c47de8" opacity="0.6"/>
+        <circle cx="60"  cy="220" r="2"  fill="#9b3dc0" opacity="0.5"/>
+        <circle cx="70"  cy="120" r="4"  fill="#9b3dc0" opacity="0.8"/>
+        <circle cx="135" cy="60"  r="2"  fill="#c47de8" opacity="0.5"/>
+        <line x1="170" y1="40"  x2="265" y2="105" stroke="#9b3dc0" stroke-width="0.5" opacity="0.3"/>
+        <line x1="265" y1="105" x2="290" y2="200" stroke="#c47de8" stroke-width="0.5" opacity="0.3"/>
+        <line x1="70"  y1="120" x2="170" y2="40"  stroke="#9b3dc0" stroke-width="0.5" opacity="0.3"/>
+        <line x1="70"  y1="120" x2="290" y2="200" stroke="#c47de8" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="170" cy="170" r="6"  fill="#72288f" opacity="0.9"/>
+        <circle cx="170" cy="170" r="14" stroke="#72288f" stroke-width="0.5" opacity="0.3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══ 1. PROJECTS ══ -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title"><em>Featured</em> Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+
+      <div class="section-header reveal" style="margin-top:72px; margin-bottom:0;">
+        <span class="section-num">02</span>
+        <h2 class="section-title">More <em>Projects</em></h2>
+        <div class="section-line"></div>
+      </div>
+      <!-- <div class="projects-legend reveal">
+        <div class="legend-item"><div class="legend-dot legend-dot--ds"></div>Data Science</div>
+        <div class="legend-item"><div class="legend-dot legend-dot--da"></div>Data Analyst</div>
+      </div> -->
+      <div class="project-list" id="projectList"></div>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-label" id="modalLabel"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-org"  id="modalOrg"></div>
+      <p class="modal-desc"   id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <!-- ══ 2. CV ══ -->
+  <section class="section" id="cv">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Curriculum <em>Vitæ</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- v1-style side-by-side timelines -->
+      <div class="cv-grid">
+
+        <!-- Experience -->
+        <div class="cv-block reveal">
+          <div class="cv-block-label">Experience</div>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-year">2025<br>→ now</div>
+              <div class="tl-content">
+                <div class="tl-title">Data Scientist</div>
+                <div class="tl-org">Personal Projects 🌐</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Development and experimentation of machine learning models on various datasets</li>
+                    <li>Data collection, structuring, analysis and predictive modelling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2025</div>
+              <div class="tl-content">
+                <div class="tl-title">Data Product Owner &amp; Data Analyst</div>
+                <div class="tl-org">Numberly 🇫🇷</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Internal automation tools to simplify repetitive tasks</li>
+                    <li>Cross-team coordination (business ↔ technical)</li>
+                    <li>Requirements gathering, planning, prototyping</li>
+                    <li>Bilingual French/English communication</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2024</div>
+              <div class="tl-content">
+                <div class="tl-title">Data Scientist</div>
+                <div class="tl-org">European Project Nautilos 🇮🇹</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Database design for underwater image analysis</li>
+                    <li>Automatic identification of <em>Nephrops norvegicus</em> (lobsters) via CBIR image processing and YOLOv8 detection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2022</div>
+              <div class="tl-content">
+                <div class="tl-title">Solidarity Mission</div>
+                <div class="tl-org">Solida'Rire Association 🇮🇳</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Improvement of the existing electrical network</li>
+                    <li>Immersive cultural experience and fieldwork</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2021</div>
+              <div class="tl-content">
+                <div class="tl-title">Beta Tester</div>
+                <div class="tl-org">Blue Frog Robotics 🇫🇷</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Launch of endurance test of Buddy the emotional robot</li>
+                    <li>Anomaly analysis & test report</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-block reveal reveal-delay-1">
+          <div class="cv-block-label">Education</div>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-year">2021<br>→ 2025</div>
+              <div class="tl-content">
+                <div class="tl-title">Engineering Degree — Data Science, Maths &amp; AI</div>
+                <div class="tl-org">Institut National Polytechnique - Phelma 🇫🇷 </div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Specialisation in data science, AI, mathematics and image processing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2024<br>→ 2025</div>
+              <div class="tl-content">
+                <div class="tl-title">Erasmus Exchange Semester</div>
+                <div class="tl-org">Linköping University 🇸🇪</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Advanced Machine Learning courses</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2024<br>→ 2025</div>
+              <div class="tl-content">
+                <div class="tl-title">Bachelor — Management, Technology &amp; Sciences</div>
+                <div class="tl-org">IAE Montpellier — eLearning 🌐</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>Business and management fundamentals to complement the engineering degree</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-year">2019<br>→ 2021</div>
+              <div class="tl-content">
+                <div class="tl-title">Preparatory Class for Grandes Écoles</div>
+                <div class="tl-org">La Prépa des INP - Bordeaux 🇫🇷</div>
+                <div class="tl-desc">
+                  <ul>
+                    <li>2-year intensive programme in mathematics, physics and computer science</li>
+                    <li>Preparing for top engineering schools</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hard Skills -->
+        <div class="cv-block reveal">
+          <div class="cv-block-label">Hard Skills</div>
+          
+            <div>
+              <div class="skill-pills">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Matlab</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">C</span> 
+
+                <div class="break"></div>
+
+                
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">NoSQL</span>
+                <span class="skill-pill">Power BI</span>
+
+                <div class="break"></div>
+
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">Notion</span>
+                <span class="skill-pill">LaTeX</span>
+                <span class="skill-pill">React</span>
+
+                <div class="break"></div>
+                
+                <span class="skill-pill">Salesforce</span>
+                <span class="skill-pill">Google Workspace</span>
+                <span class="skill-pill">GTM</span>
+              </div>
+            </div>
+          
+        </div>
+
+        <!-- Key Skills -->
+        <div class="cv-block reveal reveal-delay-1">
+          <div class="cv-block-label">Key Skills</div>
+          <div class="key-skills-list">
+            <div class="ks-item">Data Management and Processing</div>
+            <div class="ks-item">
+              <div class="ks-text">
+                <div class="ks-main">
+                  Algorithm Development: Machine Learning, Deep Learning, standard algorithms
+                </div>
+                <div class="ks-sub">
+                  e.g. : PyTorch, Scikit-learn, Ultralytics, LangChain, Numpy, Pandas, Matplotlib
+                </div>
+              </div>
+            </div>
+            <div class="ks-item">Advanced Statistics and Probability</div>
+            <div class="ks-item">Data Analysis and Visualisation</div>
+            <div class="ks-item">Results Presentation to all audiences</div>
+            <div class="ks-item">Project Management &amp; Cross-team Coordination</div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="cv-block reveal">
+          <div class="cv-block-label">Languages</div>
+          <div class="lang-list">
+            <div class="lang-item">
+              <span class="lang-name">French</span>
+              <div class="lang-right"><div class="lang-level">Native speaker</div></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">English</span>
+              <div class="lang-right">
+                <div class="lang-level">Bilingual</div>
+                <div class="lang-note">TOEFL iBT: 93/120</div>
+              </div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">Spanish</span>
+              <div class="lang-right">
+                <div class="lang-level">Intermediate</div>
+                <div class="lang-note">CEFR: B2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="cv-block reveal reveal-delay-1">
+          <div class="cv-block-label">Soft Skills</div>
+          <div class="soft-pills">
+            <span class="soft-pill">Proactive</span>
+            <span class="soft-pill">Team Player</span>
+            <span class="soft-pill">Organised</span>
+
+            <div class="break"></div>
+
+            <span class="soft-pill">Creative</span>
+            <span class="soft-pill">Rigorous</span>
+            <span class="soft-pill">Autonomous</span>
+
+            <div class="break"></div>
+
+            <span class="soft-pill">Initiative</span>
+            <span class="soft-pill">Client Relations</span>
+          </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="cv-block full reveal">
+          <div class="cv-block-label">Beyond the code</div>
+          <div class="hobbies-grid">
+            <div class="hobby-card">
+              <div class="hobby-icon">🎬</div>
+              <div class="hobby-title">Cinema</div>
+              <div class="hobby-desc"> 
+                ✨ Documentaries, dramas, comedies <br> 
+                ✨ Attended the Cannes Film Festival and the Festival du Film Francophone d'Angoulême <br> 
+                ✨ Passionate about storytelling in all its forms <br>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <div class="hobby-icon">🎠</div>
+              <div class="hobby-title">Horse Riding</div>
+              <div class="hobby-desc">
+                ✨ 10 years of practice, level 5 <br> 
+                ✨ Equitation taught me patience, precision and non-verbal communication <br>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <div class="hobby-icon">📸</div>
+              <div class="hobby-title">Photography &amp; Video</div>
+              <div class="hobby-desc">
+                ✨ Canon EOS 6D Mark II <br>
+                ✨ Focused on geometric composition <br> 
+                ✨ <a href="https://louisepoteau.myportfolio.com/work" target="_blank" class="hobby-link">Portfolio ↗</a>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <div class="hobby-icon">🌍</div>
+              <div class="hobby-title">Travel</div>
+              <div class="hobby-desc">
+                ✨ 27 countries visited <br>
+                ✨ Solo backpacking for 1 month in Asia <br>
+                ✨ Constant curiosity <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cv-grid -->
+    </div>
+  </section>
+
+  <!-- ══ 2 bis. Video Resume ══ -->
+  <section class="section" id="video-resume">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title"> <em>Video</em> Resume </h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="video-grid">
+
+      <!-- Video 1 -->
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/U4FOlhMdWvk"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h3 class="video-title">The Journey to Becoming an Engineer</h3>
+        <p class="video-date">2025</p>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/5OvPyrgmvCQ"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h3 class="video-title">Seeking Final Year Internship</h3>
+        <p class="video-date">2024</p>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/2E9rPVSfNSE"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h3 class="video-title">Seeking an M1 Internship</h3>
+        <p class="video-date">2023</p>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/JI_9hq58jxY"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h3 class="video-title">Seeking an Internship abroad</h3>
+        <p class="video-date">2022</p>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- ══ 3. CONTACT ══ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="reveal">
+          <h2 class="contact-heading">Let's work<br><em>together</em></h2>
+          <p class="contact-sub">Available immediately for full-time positions, research collaborations or just a conversation about data and AI.</p>
+          <p class="contact-location">📍 Based in Paris, France - open to opportunities worldwide</p>
+        </div>
+        <div class="contact-links reveal reveal-delay-1">
+          <a href="https://www.linkedin.com/in/louise-poteau" target="_blank" class="contact-item">
+            <span class="contact-icon" style="font-weight:600;font-size:13px;">in</span>
+            <div><div class="contact-platform">LinkedIn</div><div class="contact-handle">linkedin.com/in/louise-poteau</div></div>
+          </a>
+          <a href="mailto:louise.poteau@gmail.com" class="contact-item">
+            <span class="contact-icon">@</span>
+            <div><div class="contact-platform">Email</div><div class="contact-handle">louise.poteau@gmail.com</div></div>
+          </a>
+          <!-- <a href="tel:+33647132729" class="contact-item">
+            <span class="contact-icon">☎</span>
+            <div><div class="contact-platform">Phone</div><div class="contact-handle">+33 6 47 13 27 29</div></div>
+          </a> -->
+          <a href="https://github.com/LouisePOTEAU" target="_blank" class="contact-item">
+            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span>
+            <div><div class="contact-platform">GitHub</div><div class="contact-handle">github.com/LouisePOTEAU</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2025 Louise Poteau</span>
+      <span class="footer-made">HTML · CSS · JS — No framework</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

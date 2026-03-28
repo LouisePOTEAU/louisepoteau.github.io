@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════
+   CONTACT + FOOTER
+═══════════════════════════════════════ */
+
+.contact-section { padding: 100px 0 120px; }
+.contact-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: start;
+}
+.contact-heading {
+  font-family: 'Jost','Futura',sans-serif;
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 200; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--white);
+  line-height: 1.1; margin-bottom: 20px;
+}
+.contact-heading em { font-style: italic; color: var(--accent4); }
+.contact-sub { font-size: 13px; color: var(--text); line-height: 1.8; }
+
+.contact-links { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
+.contact-item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 24px; border: 1px solid var(--border);
+  text-decoration: none; color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+  position: relative; overflow: hidden;
+}
+.contact-item::after {
+  content: '→'; position: absolute; right: 24px;
+  color: var(--text-dim); transition: color 0.2s, transform 0.2s;
+}
+.contact-item:hover { border-color: var(--border2); background: var(--surface); }
+.contact-item:hover::after { color: var(--accent2); transform: translateX(4px); }
+.contact-icon { font-size: 15px; color: var(--text-dim); width: 20px; text-align: center; }
+.contact-platform { font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--mono); }
+.contact-handle { font-size: 13px; color: var(--text-bright); }
+
+/* ── Footer ── */
+footer { border-top: 1px solid var(--border); padding: 24px 0; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 32px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy { font-size: 11px; color: var(--text-dim); font-family: var(--mono); }
+.footer-made { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+
+@media (max-width: 768px) {
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.contact-location {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+.contact-location::first-line { color: var(--grey); }

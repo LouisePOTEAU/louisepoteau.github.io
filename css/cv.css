@@ -1,0 +1,345 @@
+/* ═══════════════════════════════════════
+   CV — TIMELINE + SKILLS + LANGUAGES + HOBBIES
+═══════════════════════════════════════ */
+
+/* ── CV grid layout ── */
+.cv-top-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; margin-bottom: 2px;
+}
+.cv-block {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 40px; transition: border-color 0.3s;
+}
+.cv-block:hover { border-color: var(--border2); }
+.cv-block.full { grid-column: span 2; }
+
+.cv-block-label {
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--accent2);
+  margin-bottom: 32px; font-family: var(--mono);
+  display: flex; align-items: center; gap: 10px;
+}
+.cv-block-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* ══════════════════════════════════════
+   DUAL TIMELINE (left=exp / right=edu)
+══════════════════════════════════════ */
+.timeline-wrapper {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Central axis */
+.timeline-axis {
+  position: absolute; left: 50%;
+  top: 0; bottom: 0;
+  width: 1px; background: var(--border2);
+  transform: translateX(-50%);
+}
+
+.timeline-list {
+  display: flex; flex-direction: column;
+  gap: 0;
+}
+
+.tl-entry {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: start;
+  min-height: 100px;
+  position: relative;
+}
+
+/* Year badge on axis */
+.tl-axis-node {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start;
+  padding-top: 4px; gap: 0;
+  position: relative; z-index: 2;
+}
+.tl-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  flex-shrink: 0; margin-top: 6px;
+  transition: background 0.3s;
+}
+.tl-dot.edu { border-color: var(--accent2); }
+.tl-entry:hover .tl-dot { background: var(--accent); }
+.tl-entry:hover .tl-dot.edu { background: var(--accent2); }
+
+.tl-year-label {
+  font-family: var(--mono); font-size: 9px;
+  color: var(--text-dim); letter-spacing: 0.06em;
+  margin-top: 4px; text-align: center; white-space: nowrap;
+}
+
+/* Left side (experience) */
+.tl-left {
+  padding-right: 28px;
+  text-align: right;
+  padding-bottom: 40px;
+}
+/* Right side (education) */
+.tl-right {
+  padding-left: 28px;
+  padding-bottom: 40px;
+}
+/* Empty side */
+.tl-empty { padding-bottom: 40px; }
+
+.tl-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  transition: border-color 0.25s, background 0.25s;
+  cursor: default;
+}
+.tl-left .tl-card { margin-left: auto; }
+.tl-card:hover { border-color: var(--border2); background: var(--surface2); }
+
+/* Logo placeholder */
+.tl-logo {
+  width: 32px; height: 32px;
+  border: 1px dashed var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 10px; font-size: 9px;
+  color: var(--text-dim); letter-spacing: 0.06em;
+  font-family: var(--mono);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.tl-left .tl-logo { margin-left: auto; }
+
+.tl-card-title {
+  font-family: 'Jost','Futura',sans-serif;
+  font-size: 13px; font-weight: 400;
+  color: var(--accent4); margin-bottom: 3px;
+  letter-spacing: 0.02em;
+}
+.tl-card-org {
+  font-size: 11px; color: var(--accent2);
+  margin-bottom: 4px; letter-spacing: 0.04em;
+}
+.tl-card-loc {
+  font-size: 10px; color: var(--text-dim);
+  font-family: var(--mono); margin-bottom: 10px;
+}
+.tl-card-desc {
+  font-size: 11px; color: var(--text-dim); line-height: 1.65;
+  margin-bottom: 10px;
+}
+.tl-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tl-left .tl-card-tags { justify-content: flex-end; }
+
+/* ── Column headers ── */
+.timeline-cols {
+  display: grid; grid-template-columns: 1fr 48px 1fr;
+  margin-bottom: 24px;
+}
+.tcol-label {
+  font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; font-family: var(--mono);
+  color: var(--text-dim); padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.tcol-label.left { text-align: right; padding-right: 28px; }
+.tcol-label.right { padding-left: 28px; }
+
+/* ══════════════════════════════════════
+   SKILLS (list style, no bars)
+══════════════════════════════════════ */
+.skills-columns {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+.skill-group-title {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent2); margin-bottom: 14px; font-family: var(--mono);
+}
+.skill-pills {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.skill-pill {
+  font-size: 12px; color: var(--text);
+  padding: 6px 14px;
+  border: 1px solid var(--border2);
+  letter-spacing: 0.03em;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.skill-pill:hover {
+  border-color: var(--accent); color: var(--accent3);
+  background: rgba(114,40,143,0.08);
+}
+
+/* ── Key skills bullets ── */
+.key-skills-list {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.ks-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 13px; color: var(--text); line-height: 1.5;
+}
+.ks-item::before {
+  content: '▸';
+  color: var(--accent2); flex-shrink: 0; font-size: 10px; margin-top: 3px;
+}
+
+/* ── Soft skills ── */
+.soft-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.soft-pill {
+  font-size: 11px; padding: 5px 14px;
+  border: 1px solid rgba(196,125,232,0.25);
+  color: var(--text); letter-spacing: 0.06em;
+  /* text-transform: uppercase; */
+  transition: all 0.2s;
+}
+.soft-pill:hover {
+  border-color: var(--accent2); color: var(--accent2);
+  background: rgba(114,40,143,0.06);
+}
+
+/* ══════════════════════════════════════
+   LANGUAGES
+══════════════════════════════════════ */
+.lang-list { display: flex; flex-direction: column; gap: 18px; }
+.lang-item {
+  display: flex; align-items: baseline;
+  justify-content: space-between; gap: 16px;
+  padding-bottom: 18px; border-bottom: 1px solid var(--border);
+}
+.lang-item:last-child { border-bottom: none; padding-bottom: 0; }
+.lang-name {
+  font-size: 15px; color: var(--white);
+  font-weight: 300; letter-spacing: 0.04em;
+}
+.lang-right { text-align: right; }
+.lang-level {
+  font-size: 11px; color: var(--accent2);
+  letter-spacing: 0.06em; margin-bottom: 2px;
+}
+.lang-note {
+  font-size: 10px; color: var(--text-dim);
+  font-family: var(--mono);
+}
+
+/* ══════════════════════════════════════
+   HOBBIES
+══════════════════════════════════════ */
+.hobbies-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+}
+.hobby-card {
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 28px 22px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.hobby-card:hover { border-color: var(--border2); background: var(--surface2); }
+.hobby-icon { font-size: 26px; margin-bottom: 14px; }
+.hobby-title {
+  font-family: 'Jost','Futura',sans-serif;
+  font-size: 12px; font-weight: 500;
+  color: var(--white); letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.hobby-desc { font-size: 11px; color: var(--grey); line-height: 1.7; }
+
+.hobby-link{
+  color: var(--accent2);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.hobby-link:hover{
+  opacity: 0.7;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .cv-top-grid { grid-template-columns: 1fr; }
+  .cv-block.full { grid-column: span 1; }
+  .skills-columns { grid-template-columns: 1fr; gap: 24px; }
+  .hobbies-grid { grid-template-columns: 1fr 1fr; }
+  /* Collapse dual timeline to single column on mobile */
+  .timeline-cols { display: none; }
+  .tl-entry { grid-template-columns: 24px 1fr; grid-template-rows: auto auto; }
+  .tl-axis-node { grid-column: 1; grid-row: 1; }
+  .tl-left  { grid-column: 2; grid-row: 1; text-align: left; padding-right: 0; padding-left: 16px; }
+  .tl-right { grid-column: 2; grid-row: 1; padding-left: 16px; }
+  .tl-empty { display: none; }
+  .tl-left .tl-logo { margin-left: 0; }
+  .tl-left .tl-card-tags { justify-content: flex-start; }
+  .timeline-axis { left: 11px; }
+}
+@media (max-width: 600px) {
+  .hobbies-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════
+   V1-STYLE SIDE-BY-SIDE TIMELINE
+   (replaces dual-axis layout for Exp+Edu)
+══════════════════════════════════════ */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.cv-block { background: var(--surface); border: 1px solid var(--border); padding: 40px; transition: border-color 0.3s; }
+.cv-block:hover { border-color: var(--border2); }
+.cv-block.full { grid-column: span 2; }
+.cv-block-label {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent2); margin-bottom: 28px; font-family: var(--mono);
+  display: flex; align-items: center; gap: 10px;
+}
+.cv-block-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+.timeline { display: flex; flex-direction: column; gap: 28px; }
+.tl-item { display: grid; grid-template-columns: 80px 1fr; gap: 20px; }
+.tl-year { font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; padding-top: 3px; text-align: right; line-height: 1.5; font-family: var(--mono); }
+.tl-content { border-left: 1px solid var(--border2); padding-left: 20px; position: relative; }
+.tl-content::before {
+  content: ''; position: absolute; left: -4px; top: 6px;
+  width: 7px; height: 7px; background: var(--accent); border-radius: 50%;
+}
+.tl-title { font-family: 'Jost','Futura',sans-serif; font-size: 14px; font-weight: 400; color: var(--text-bright); margin-bottom: 2px; letter-spacing: 0.02em; }
+.tl-org   { font-size: 12px; color: var(--accent2); margin-bottom: 6px; letter-spacing: 0.03em; }
+.tl-desc  { font-size: 12px; color: var(--text-dim); line-height: 1.65; }
+
+@media (max-width: 768px) {
+  .cv-grid { grid-template-columns: 1fr; }
+  .cv-block.full { grid-column: span 1; }
+}
+
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+
+.tl-desc ul {
+  list-style-type: disc; /* ou circle, square */
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.tl-desc li {
+  margin-bottom: 8px; /* espace entre les lignes */
+  line-height: 1.5;
+}
+
+.ks-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.ks-sub{
+  font-style: italic;
+  color: var(--grey);
+  margin-top:4px;
+}

@@ -1,0 +1,202 @@
+/* ═══════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════ */
+
+.section { padding: 70px 0 100px; }
+
+/* ── Color tokens for DS / DA ── */
+:root {
+  /* Data Science — purple (main accent) */
+  --ds-accent:   var(--accent-light);   /* #9b3dc0 */
+  --ds-tag-bg:   rgba(114,40,143,0.12);
+  --ds-tag-color:#c47de8;
+  --ds-tag-border:rgba(196,125,232,0.25);
+  --ds-bar:      linear-gradient(90deg, var(--accent), transparent);
+
+  /* Data Analyst — soft blue-teal (distinct but quiet) */
+  --da-accent:   #4da8c7;
+  --da-tag-bg:   rgba(77,168,199,0.08);
+  --da-tag-color:#7dd4ec;
+  --da-tag-border:rgba(125,212,236,0.2);
+  --da-bar:      linear-gradient(90deg, #4da8c7, transparent);
+}
+
+/* ── Featured grid ── */
+.featured-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; margin-bottom: 2px;
+}
+
+.project-card {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 36px; position: relative; overflow: hidden;
+  transition: border-color 0.3s, background 0.3s; cursor: none;
+}
+.project-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--ds-bar);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.project-card:hover { border-color: var(--border2); background: #110e1a; }
+.project-card:hover::before { transform: scaleX(1); }
+.project-card.wide { grid-column: span 2; }
+
+.card-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+/* .card-index { font-size: 11px; color: var(--muted); font-family: var(--mono); } */
+.card-year  { font-size: 11px; color: var(--text-dim); font-family: var(--mono); }
+.card-org   { font-size: 11px; color: var(--accent2); letter-spacing: 0.04em; margin-bottom: 12px; }
+
+.card-title {
+  font-family: 'Jost', 'Futura', sans-serif;
+  font-size: 18px; font-weight: 300; letter-spacing: 0.02em;
+  color: var(--text-bright); margin-bottom: 10px; line-height: 1.3;
+}
+.card-desc {
+  font-size: 13px; color: var(--text);
+  line-height: 1.75; margin-bottom: 22px;
+}
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+
+/* Tags: technology (purple) */
+.tag {
+  font-size: 10px; padding: 3px 10px;
+  background: var(--ds-tag-bg);
+  color: var(--ds-tag-color);
+  border: 1px solid var(--ds-tag-border);
+  letter-spacing: 0.05em; font-family: var(--mono);
+}
+/* Tags: keyword/skill (slightly dimmer, same family) */
+.tag-keyword {
+  background: transparent;
+  color: var(--text-dim);
+  border-color: var(--border2);
+  font-style: italic;
+}
+
+.card-links { display: flex; gap: 20px; }
+.card-link {
+  font-size: 11px; color: var(--text-dim); text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.2s; font-family: var(--mono);
+}
+.card-link svg { width: 12px; height: 12px; }
+.card-link:hover { color: var(--accent2); }
+
+/* ── Section legend ── */
+.projects-legend {
+  display: flex; gap: 24px; align-items: center;
+  margin-bottom: 20px; padding: 14px 20px;
+  background: var(--surface); border: 1px solid var(--border);
+}
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+.legend-dot--ds { background: var(--accent-light); }
+.legend-dot--da { background: var(--da-accent); }
+
+/* ── Project list rows ── */
+.project-list { margin-top: 2px; }
+
+.project-row {
+  background: var(--surface); border: 1px solid var(--border); border-top: none;
+  padding: 16px 28px;
+  display: grid; grid-template-columns: 1fr auto auto auto;
+  align-items: center; gap: 20px;
+  cursor: none; transition: background 0.2s, border-color 0.2s;
+  position: relative;
+}
+.project-row:first-child { border-top: 1px solid var(--border); }
+.project-row:hover { background: #110e1a; border-color: var(--border2); }
+
+/* Left accent line per type */
+.project-row::after {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px;
+  opacity: 0; transition: opacity 0.2s;
+}
+.project-row--ds::after { background: var(--accent-light); }
+.project-row--da::after { background: var(--da-accent); }
+.project-row:hover::after { opacity: 1; }
+
+/* Type indicator dot (always visible, very subtle) */
+.project-row::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px; opacity: 0.25;
+}
+.project-row--ds::before { background: var(--accent-light); }
+.project-row--da::before { background: var(--da-accent); }
+
+.row-num  { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+.row-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.row-name { font-family: 'Jost','Futura',sans-serif; font-size: 15px; font-weight: 300; color: var(--text-bright); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-org  { font-size: 11px; color: var(--text-dim); letter-spacing: 0.03em; }
+.row-tags { display: flex; gap: 6px; }
+.row-year { font-size: 11px; color: var(--text-dim); white-space: nowrap; font-family: var(--mono); }
+.row-arrow { font-size: 16px; color: var(--muted); transition: color 0.2s, transform 0.2s; }
+.project-row:hover .row-arrow { color: var(--accent2); transform: translateX(4px); }
+
+/* DA rows: tag color override */
+.project-row--da .tag { background: var(--da-tag-bg); color: var(--da-tag-color); border-color: var(--da-tag-border); }
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(6,4,10,0.92);
+  backdrop-filter: blur(10px);
+  z-index: 200; display: none;
+  align-items: center; justify-content: center; padding: 32px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface); border: 1px solid var(--border2);
+  max-width: 640px; width: 100%; padding: 48px;
+  position: relative; animation: scaleIn 0.25s ease;
+}
+/* Modal top border changes per type */
+.modal[data-type="ds"] { border-top: 2px solid var(--accent-light); }
+.modal[data-type="da"] { border-top: 2px solid var(--da-accent); }
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-close {
+  position: absolute; top: 20px; right: 20px;
+  background: none; border: none; color: var(--text-dim);
+  font-size: 18px; cursor: none; transition: color 0.2s;
+  font-family: var(--mono); line-height: 1;
+}
+.modal-close:hover { color: var(--accent2); }
+.modal-label { font-size: 10px; color: var(--accent2); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; font-family: var(--mono); }
+.modal-title {
+  font-family: 'Jost','Futura',sans-serif;
+  font-size: 24px; font-weight: 200; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--text-bright); margin-bottom: 6px;
+}
+.modal-org { font-size: 12px; color: var(--accent2); margin-bottom: 18px; letter-spacing: 0.04em; }
+.modal-desc { font-size: 13px; line-height: 1.8; color: var(--text); margin-bottom: 24px; }
+.modal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.modal-links { display: flex; gap: 16px; }
+
+/* DA modal tag override */
+.modal[data-type="da"] .tag { background: var(--da-tag-bg); color: var(--da-tag-color); border-color: var(--da-tag-border); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .featured-grid { grid-template-columns: 1fr; }
+  .project-card.wide { grid-column: span 1; }
+  .project-row { grid-template-columns: 30px 1fr auto; }
+  .row-tags, .row-year { display: none; }
+}
+
+.row-name{
+  min-width:0;
+}
